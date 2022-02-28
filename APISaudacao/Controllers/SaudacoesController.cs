@@ -21,7 +21,8 @@ public class SaudacoesController : ControllerBase
 
         return new Saudacao()
         {
-            Mensagem = $"Olá {nome}"
+            Mensagem = $"Olá {nome}",
+            Horario = DateTime.UtcNow.AddHours(-3).ToString("HH:mm:ss")
         };
     }
 }
